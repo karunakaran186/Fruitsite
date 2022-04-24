@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+box-sizing: border-box;
+}
+body {
+width: 100%;
+height: 100%;
+margin: 0;
+background-color: #E6E6FA;
+background-image: url('https://img.rawpixel.com/s3fs- private/rawpixel_images/website_content/rm295-mynt- 74_1.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=93d3cce28889e3ef8362b1474ddf5b9a');
+font-family: "arial";
+}
+.cart {
+width: 1200px;
+height: 550px;
+margin: 130px auto;
+background: #FFF0F5;
+box-shadow: 2px 2px 2px 4px rgba(252, 108, 133);
+border-radius: 5px;
+display: flex;
+flex-direction: column;
+}
+.title {
+height: 100px;
+border-bottom: 2px solid #FC6C85;
+padding: 25px 30px;
+color: #000000;
+font-size: 30px;
+font-weight: 700;
+font-family: "times new roman";
+}
+.item {
+padding: 30px 30px;
+height: 200px;
+display: flex;
+}
+.item:nth-child(2) {
+border-top: 0px solid #FC6C85D;
+border-bottom: 2px solid #FC6C85;
+}
+.item:nth-child(3) {
+border-top: 0px solid #FC6C85;
+border-bottom: 2px solid #FC6C85;
+}
+.item:nth-child(4) {
+border-top: 0px solid #FC6C85;
+border-bottom: 2px solid #FC6C85;
+}
+.buttons {
+position: relative;
+padding-top: 30px;
+margin-right: 60px;
+}
+.delete-btn,
+.like-btn {
+display: inline-block;
+Cursor: pointer;
+}
+.delete-btn {
+width: 38px;
+height: 18px;
+text-align: center;
+font-size: 13px;
+background-color: #FFDFDD;
+}
+.delete-btn:hover {
+background-color: #FBBBB9;
+color {
+opacity: 0.1;
+}
+color: deeprose;
+}
+.like-btn {
+position: absolute;
+top: 32px;
+left: 44px;
+text-align: center;
+font-size: 13px;
+background: #FFDFDD;
+width: 38px;
+height: 18px;
+background-size: 2900%;
+background-repeat: no-repeat;
+}
+.like-btn:hover {
+background-color: #FBBBB9;
+color {
+opacity: 0.1;
+}
+color: deeprose;
+}
+.is-active {
+animation-name: animate;
+animation-duration: .8s;
+animation-iteration-count: 1;
+animation-timing-function: steps(28);
+animation-fill-mode: forwards;
+}
+@keyframes animate {
+0% { background-position: left; }
+50% { background-position: right; }
+100% { background-position: right; }
+}
+.image {
+margin-right: 50px;
+}
+Let’s add some basic style to product name and description.
+.description {
+padding-top: 30px;
+margin-right: 30px;
+width: 115px;
+}
+.description span {
+display: block;
+font-size: 14px;
+color: #000000;
+font-weight: 700;
+}
+.description span:first-child {
+margin-bottom: 5px;
+color: #000000;
+}
+.description span:last-child {
+font-weight: 500;
+margin-top: 8px;
+color: #000000;
+}
+.quantity {
+padding-top: 20px;
+margin-right: 20px;
+}
+.quantity input {
+-webkit-appearance: none;
+border: none;
+margin-right: 20px;
+text-align: right;
+width: 100px;
+font-size: 16px;
+text-color: #000000;
+font-weight: 300;
+background-color: #FFF0F5
+}
+button[class*=btn] {
+width: 50px;
+height: 30px;
+margin-left: 100px;
+margin-right: 20px;
+background-color: #FFDFDD;
+border-radius: 30px;
+border: none;
+cursor: pointer;
+}
+.minus-btn img {
+margin-bottom: 1px;
+}
+.minus-btn:hover {
+background-color: #FBBBB9;
+color {
+opacity: 0.1;
+}
+color: deeprose;
+}
+.plus-btn img {
+margin-top: 1px;
+}
+.plus-btn:hover {
+background-color: #FBBBB9;
+color {
+opacity: 0.1;
+}
+color: deeprose;
+}
+button:focus,
+input:focus {
+outline:0;
+}
+.total-price {
+width: 83px;
+padding-top: 27px;
+margin-left: 100px;
+text-align: center;
+font-size: 15px;
+color: #43484D;
+font-weight: 700;
+}
+</style>
+</head>
+<body>
+<div class="cart">
+<!-- Title -->
+<div class="title">
+Cart
+</div>
+<!-- Product #1 -->
+<div class="item">
+<div class="buttons">
+<span class="delete-btn">DEL</span>
+<span class="like-btn">LIKE</span>
+</div>
+<div class="image">
+<img src="https://images.eatthismuch.com/img/1558_hannahgothelf_d31dbcdc-ceba-4266-84d5-e1e7d3e235a9.jpg" alt="strawberries" width="80" height="80" align="left"/>
+</div>
+<div class="description">
+<span>Strawberries</span>
+<span>1KG</span>
+</div>
+<div class="quantity">
+<button class="plus-btn" type="button" name="button">
+<img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2018/240/iconmonstr- plus-circle-thin.png" alt="plus" width="20" height="27" />
+</button>
+<input type="text" name="name" value="1">
+<button class="minus-btn" type="button" name="button">
+<img src="https://encryptedtbn0.gstatic.com/images?q=tbn:ANd9GcQBZw5nEG4Piy3HuzCGKlq- muMsE1EoCSQDLQ&usqp=CAU" alt="minus" width="20" height="27"/>
+</button>
+</div>
+<div class="total-price">RM 11.00</div>
+</div>
+<!-- Product #2 -->
+<div class="item">
+<div class="buttons">
+<span class="delete-btn">DEL</span>
+<span class="like-btn">LIKE</span>
+</div>
+<div class="image">
+<img src="https://media.istockphoto.com/photos/banana-bunch-pictureid173242750?k=20&m=173242750&s=612x612&w=0&h=dgXrAP6otDeY5h6fhy-SRmW- 2dFOCKx1_hNS1lLWF7Y=" alt="banana" width="105" height="80" align="left" />
+</div>
+<div class="description">
+<span>Bananas</span>
+<span>1KG</span>
+</div>
+<div class="quantity">
+<button class="plus-btn" type="button" name="button">
+<img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2018/240/iconmonstr- plus-circle-thin.png" alt="plus" width="20" height="27" />
+</button>
+<input type="text" name="name" value="1">
+<button class="minus-btn" type="button" name="button">
+<img src="https://encryptedtbn0.gstatic.com/images?q=tbn:ANd9GcQBZw5nEG4Piy3HuzCGKlq- muMsE1EoCSQDLQ&usqp=CAU" alt="minus" width="20" height="27" />
+</button>
+</div>
+<div class="total-price">RM 7.50</div>
+</div>
+<!-- Product #3 -->
+<div class="item">
+<div class="buttons">
+<span class="delete-btn">DEL</span>
+<span class="like-btn">LIKE</span>
+</div>
+<div class="image">
+<img src="https://www.collinsdictionary.com/images/full/grape_229112122.jpg" alt="grapes"width="113" height="80" align="left" />
+</div>
+<div class="description">
+<span>Grapes</span>
+<span>1KG</span>
+</div>
+<div class="quantity">
+<button class="plus-btn" type="button" name="button">
+<img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2018/240/iconmonstr- plus-circle-thin.png" alt="plus" width="20" height="27" />
+</button>
+<input type="text" name="name" value="1">
+<button class="minus-btn" type="button" name="button">
+<img src="https://encryptedtbn0.gstatic.com/images?q=tbn:ANd9GcQBZw5nEG4Piy3HuzCGKlq- muMsE1EoCSQDLQ&usqp=CAU" alt="minus" width="20" height="27" />
+</button>
+</div>
+<div class="total-price">RM 19.80</div>
+</div>
+</div>
+</body>
+</html>
